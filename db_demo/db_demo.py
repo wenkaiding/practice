@@ -7,17 +7,18 @@ class Demo():
     def __init__(self):
         self.connection = pymysql.connect(host="",
                                           user="",
+                                          port=,
                                           password="",
                                           db="",
-                                          charset='utf8')
+                                          charset='')
         self.db = None
 
     def dbconnecter(self):
         with self.connection.cursor() as cursor:
-            self.connection.cursor().execute("select id from ### limit 100")
+            cursor.execute("")
             query_result = cursor.fetchall()
             # TODO catch exception
-        print query_result
+        print query_result[1][0]
 
 
 if __name__ == '__main__':
